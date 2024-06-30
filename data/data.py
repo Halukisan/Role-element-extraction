@@ -4,6 +4,7 @@ import numpy as np
 from tqdm import tqdm
 import json
 
+# 以下代码为训练数据集的制作，因为平台给与的数据集质量堪忧，并且数据的量也不够，所以对于原有的数据，进行了扩充。
 def chatbot(prompt):
     #星火认知大模型Spark3.5 Max的URL值，其他版本大模型URL值请前往文档（https://www.xfyun.cn/doc/spark/Web.html）查看
     SPARKAI_URL = 'wss://spark-api.xf-yun.com/v3.5/chat'
