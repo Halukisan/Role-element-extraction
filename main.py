@@ -3,6 +3,11 @@ from sparkai.core.messages import ChatMessage
 import json
 from tqdm import tqdm
 
+# 以下是baseline1的代码，得分在15-19之间
+# 通过数据预处理以及prompt优化可以提高到20+
+# 关于数据预处理部分：1.正则清理数据中无效的数据，如url链接以及中括号里面的字符串等。
+#                     2. 对于一个人的多轮谈话信息，可以进行合并。
+# 关于prompt部分：自己看着办~
 
 #星火认知大模型Spark3.5 Max的URL值，其他版本大模型URL值请前往文档（https://www.xfyun.cn/doc/spark/Web.html）查看
 SPARKAI_URL = 'wss://spark-api.xf-yun.com/v3.5/chat'
@@ -217,15 +222,11 @@ if __name__ == "__main__":
     retry_count = 5 # 重试次数
     result = []
     error_data = []
-    
-    
+        
     # 读取数据
     train_data = read_json("dataset/train.json")
     test_data = read_json("dataset/test_data.json")
-
-    
-
-        
+   
     for index, data in tqdm(enumerate(test_data)):
         index += 1
         is_success = False
