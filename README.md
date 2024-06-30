@@ -1,5 +1,9 @@
 # Role-element-extraction
 赛事背景 在数字化时代，企业积累了大量对话数据，这些数据不仅是交流记录，还隐藏着宝贵的信息。群聊对话分角色要素提取是企业营销和服务的重要策略，通过分析这些数据，企业可以更好地理解客户需求，提供个性化服务，提升客户满意度和商业价值。 赛事任务 从给定的&lt;客服>与&lt;客户>的群聊对话中，提取出指定的字段信息，具体待提取的字段信息见下文。
+## 代码文件介绍
+根目录下的main.py是baseline的代码，填写自己的![星火模型密钥](https://console.xfyun.cn/services/bm35),然后直接运行就可以了，得到相应的json文件，在![pp飞浆](https://challenge.xfyun.cn/topic/info?type=role-element-extraction&ch=dw24_sHJm0e)官网提交评审。
+dataset目录下存放官方给的训练和测试数据集。
+data目录下是baseline2的微调代码，test.csv是用于微调的测试数据集，traindata.jsonl为训练数据集，将这两个文件提交到![讯飞星火大模型定制平台](https://training.xfyun.cn/model/detail/2418150065833985)进行微调。
 ### 评审规则
 1. 平台说明
 参赛选手需基于讯飞星火大模型Spark Max完成任务，可使用大模型微调。报名参赛选手将获得API和微调训练资源福利，详情请登录讯飞开放平台和大模型训练平台查看。
